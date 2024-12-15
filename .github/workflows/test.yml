@@ -2,6 +2,9 @@ name: quaytest
 
 on: push
 
+env:
+    ARTIFACT_NAME: myfile.txt
+
 jobs:
     job1:
         runs-on: ubuntu-latest
@@ -22,7 +25,7 @@ jobs:
             - name: upload the readme file
               uses: actions/upload-artifact@v4.4.3
               with: 
-                  name: readme.txt
+                  name: ${{ ARTIFACT_NAME }}
                   path: ./README.md
     job3:
         runs-on: ubuntu-latest
