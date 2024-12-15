@@ -15,6 +15,10 @@ jobs:
         steps:
             - name: display the Macos versions
               run: sw_vers
+            - name: checkout code
+              uses: actions/checkout@v4.2.2
+            - name: list the current directoty
+              run: pwd;ls -al
     job3:
         runs-on: ubuntu-latest
         container: 
