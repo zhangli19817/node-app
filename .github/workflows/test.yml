@@ -1,0 +1,15 @@
+name: quaytest
+
+on: push
+
+jobs:
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: list the env
+              run: export
+    jobs2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: show the current date and time
+              run: date
